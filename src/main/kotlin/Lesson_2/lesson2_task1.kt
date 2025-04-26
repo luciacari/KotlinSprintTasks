@@ -14,5 +14,5 @@ fun main() {
 //    – В консоли должно быть выведено дробное число с 2 знаками после запятой.
 
     val average: Float = ((3f + 4f + 3f + 5f) / 4).toFloat()
-    println("%.2f".format(average)) // Форматирование значения
+    println("%.2f".format(average)) //Форматирование значения
 }
