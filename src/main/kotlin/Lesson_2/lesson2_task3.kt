@@ -12,10 +12,14 @@ fun main() {
     var hour: Byte = 9
     var minutes: Byte = 39
     var travelTimeInMinutes: Short = 457
+    val minInHour: Byte = 60
 
-    var departureTimeInMinutes: Int = (hour * 60) + minutes
+    var departureTimeInMinutes: Int = (hour * minInHour) + minutes
     var arrivalTimeInMinutes: Int = departureTimeInMinutes + travelTimeInMinutes
 
-    println("Время отправления поезда: ${departureTimeInMinutes/60}:${departureTimeInMinutes%60}")
-    println("Время прибытия поезда: ${arrivalTimeInMinutes/60}:${arrivalTimeInMinutes%60}")
+    var arrivalTime: String
+    arrivalTime = (arrivalTimeInMinutes/minInHour).toString() + ":" + (arrivalTimeInMinutes%minInHour).toString()
+
+    //println("Время отправления поезда: ${departureTimeInMinutes/minInHour}:${departureTimeInMinutes%minInHour}")
+    println("Время прибытия поезда: $arrivalTime")
 }
