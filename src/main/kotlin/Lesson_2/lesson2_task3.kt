@@ -20,6 +20,5 @@ fun main() {
     var arrivalTime: String
     arrivalTime = (arrivalTimeInMinutes/minInHour).toString() + ":" + (arrivalTimeInMinutes%minInHour).toString()
 
-    //println("Время отправления поезда: ${departureTimeInMinutes/minInHour}:${departureTimeInMinutes%minInHour}")
     println("Время прибытия поезда: $arrivalTime")
 }
