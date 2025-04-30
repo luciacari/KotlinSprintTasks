@@ -10,7 +10,7 @@ fun main() {
 //    и распечатать по отдельности.
 
     var chessMove: String = "D2-D4;0"
-    val listChessMove = chessMove.split("[- ;]".toRegex())
+    val listChessMove = chessMove.split("-",";")
 
     var currentPosition: String = listChessMove[0]  // Получаем первый элемент из списка
     var nextPosition: String = listChessMove[1]
