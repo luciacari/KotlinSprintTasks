@@ -23,8 +23,14 @@ fun main() {
     val airMoisture: Int = 20
     val currentSeason: String = "зима"
 
-    val comparisonResult: Boolean = weatherIsSunny && tentIsOpen && airMoisture == 20 && currentSeason != "зима"
+    val comparisonResult: Boolean =
+        (weatherIsSunny == WEATHER_IS_SUNNY) && (tentIsOpen == TENT_IS_OPEN) && (airMoisture == AIR_MOISTURE) && (currentSeason ==
+                CURRENT_SEASON)
 
     println("Благоприятные ли условия сейчас для роста бобовых? $comparisonResult")
 }
 
+const val WEATHER_IS_SUNNY: Boolean = true
+const val TENT_IS_OPEN: Boolean = true
+const val AIR_MOISTURE: Int = 20
+const val CURRENT_SEASON: String = "не зима"
