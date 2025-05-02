@@ -10,15 +10,13 @@ fun main() {
 
     val flightInSeconds: Short = 6480
 
-    // определяем целое количество часов и остаток в секундах
     val flightInHours: Int = flightInSeconds / (SEC_IN_MINUTE * MIN_IN_HOUR)
     var remainderInSeconds: Int = flightInSeconds % (SEC_IN_MINUTE * MIN_IN_HOUR)
 
-    // определяем целое количество минут и остаток в секундах
     val flightInMinutes: Int = remainderInSeconds / SEC_IN_MINUTE
     remainderInSeconds = remainderInSeconds % SEC_IN_MINUTE
 
-    println("${"%02d".format(flightInHours)}:${"%02d".format(flightInMinutes)}:${"%02d".format(remainderInSeconds)}")
+    println("%02d:%02d:%02d".format(flightInHours, flightInMinutes, remainderInSeconds))
 }
 
 const val SEC_IN_MINUTE: Byte = 60
