@@ -20,25 +20,24 @@ fun main() {
 
     var dayInOrder: Byte = 5
     var groupArmsAbs: Boolean = (dayInOrder % 2) == 1
-    var groupLegsBack: Boolean = (dayInOrder % 2) == 0
 
     println(
         """
         Упражнения для рук:       $groupArmsAbs
-        Упражнения для ног:       $groupLegsBack
-        Упражнения для спины:   $groupLegsBack
+        Упражнения для ног:       ${!groupArmsAbs}
+        Упражнения для спины:   ${!groupArmsAbs}
         Упражнения для пресса:  $groupArmsAbs
         """.trimIndent() + "\n"
     )
 
     dayInOrder++
     groupArmsAbs = (dayInOrder % 2) == 1
-    groupLegsBack = (dayInOrder % 2) == 0
+
     println(
         """
         Упражнения для рук:       $groupArmsAbs
-        Упражнения для ног:       $groupLegsBack
-        Упражнения для спины:   $groupLegsBack
+        Упражнения для ног:       ${!groupArmsAbs}
+        Упражнения для спины:   ${!groupArmsAbs}
         Упражнения для пресса:  $groupArmsAbs
         """.trimIndent() + "\n"
     )
