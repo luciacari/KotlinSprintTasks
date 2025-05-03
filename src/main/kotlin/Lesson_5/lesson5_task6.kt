@@ -31,11 +31,13 @@ fun main() {
 
     imt = weight / (height * height)
     weightCategory = when {
-        imt < 18.5f -> "Недостаточная масса тела"
-        imt >= 18.5f && imt < 25f -> "Нормальная масса тела"
-        imt >= 25f && imt < 30f -> "Избыточная масса тела"
+        imt < LOWER_LIMIT -> "Недостаточная масса тела"
+        imt >= LOWER_LIMIT && imt < NORMAL_VALUE -> "Нормальная масса тела"
+        imt >= NORMAL_VALUE && imt < UPPER_LIMIT -> "Избыточная масса тела"
         else -> "Ожирение"
     }
     println("ИМТ: ${String.format("%.2f", imt)} - $weightCategory")
 }
-
+const val LOWER_LIMIT: Float = 18.5f
+const val NORMAL_VALUE: Float = 25f
+const val UPPER_LIMIT: Float = 30f
