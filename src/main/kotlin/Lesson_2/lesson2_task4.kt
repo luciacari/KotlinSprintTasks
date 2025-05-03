@@ -14,6 +14,7 @@ fun main() {
     val ironOre: Byte = 11
     val percent: Int = 20
 
-    println("Количество бонусной кристаллической руды: ${crystalOre * percent / 100}")
-    println("Количество бонусной железной руды: ${ironOre * percent / 100}")
+    println("Количество бонусной кристаллической руды: ${crystalOre * percent / DENOMINATOR}")
+    println("Количество бонусной железной руды: ${ironOre * percent / DENOMINATOR}")
 }
+const val DENOMINATOR: Int = 100
