@@ -18,10 +18,9 @@ fun main() {
     val finalDepositAmount: Double
 
     finalDepositAmount = INITIAL_DEPOSIT_AMOUNT.toDouble() *
-            (1.0 + (interestRate / DENOMINATOR.toDouble()) / MONTHS_IN_YEAR.toDouble()).pow(period * MONTHS_IN_YEAR.toDouble())
+            Math.pow(1.0 + (interestRate / DENOMINATOR.toDouble()), period.toDouble())
 
-    println("%.3f".format(finalDepositAmount))
+    println(String.format("%.3f", finalDepositAmount)) // форматируем вывод с 3 знаками после запятой
 }
 
 const val INITIAL_DEPOSIT_AMOUNT: Int = 70000
-const val MONTHS_IN_YEAR: Int = 12
