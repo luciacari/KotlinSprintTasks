@@ -22,5 +22,4 @@ fun main() {
 
     println(String.format("%.3f", finalDepositAmount)) // форматируем вывод с 3 знаками после запятой
 }
-
 const val INITIAL_DEPOSIT_AMOUNT: Int = 70000
